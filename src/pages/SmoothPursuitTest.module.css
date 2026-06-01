@@ -1,0 +1,35 @@
+.root { display: flex; flex-direction: column; height: 100vh; width: 100vw; background: var(--bg-primary); }
+
+.header { display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; border-bottom: 1px solid var(--border); background: var(--bg-secondary); }
+.backBtn { display: flex; align-items: center; gap: 6px; background: transparent; color: var(--text-secondary); font-size: 12px; font-family: var(--font-mono); padding: 6px 10px; border-radius: 6px; border: 1px solid transparent; }
+.backBtn:hover { color: var(--text-primary); border-color: var(--border-bright); }
+.headerCenter { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 15px; font-weight: 700; }
+.headerStats { display: flex; gap: 24px; }
+.stat { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.statLabel { font-size: 9px; letter-spacing: 2px; color: var(--text-dim); }
+.statVal { font-size: 16px; font-weight: 700; font-family: var(--font-display); }
+
+.arena { flex: 1; display: flex; align-items: center; justify-content: center; }
+
+.card { background: var(--bg-card); border: 1px solid var(--border-bright); border-radius: 20px; padding: 48px 56px; max-width: 480px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+.cardTitle { font-family: var(--font-display); font-size: 24px; font-weight: 800; }
+.cardDesc { color: var(--text-secondary); font-size: 12px; line-height: 1.8; }
+.cardNote { font-size: 11px; color: var(--text-dim); }
+.startBtn { background: rgba(0,255,136,0.1); border: 1px solid rgba(0,255,136,0.4); color: #00ff88; font-family: var(--font-mono); font-size: 13px; padding: 12px 32px; border-radius: 8px; cursor: pointer; }
+.startBtn:hover { background: rgba(0,255,136,0.18); }
+
+.testArea { display: flex; flex-direction: column; align-items: center; gap: 20px; width: 600px; }
+.progressBar { width: 100%; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
+.progressFill { height: 100%; border-radius: 2px; transition: width 0.3s; }
+
+.canvas { width: 500px; height: 420px; background: #000; border-radius: 12px; border: 1px solid var(--border-bright); position: relative; cursor: crosshair; overflow: hidden; }
+.orbitRing { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 350px; height: 350px; border-radius: 50%; border: 1px dashed rgba(0,255,136,0.15); }
+.movingDot { position: absolute; width: 22px; height: 22px; border-radius: 50%; background: #00ff88; box-shadow: 0 0 20px rgba(0,255,136,0.8); transform: translate(-50%,-50%); transition: none; }
+.hitMark { position: absolute; width: 10px; height: 10px; border-radius: 50%; background: #00ff88; transform: translate(-50%,-50%); pointer-events: none; }
+.missMark { position: absolute; width: 8px; height: 8px; border-radius: 50%; background: #ff3860; transform: translate(-50%,-50%); pointer-events: none; }
+
+.instruction { font-size: 11px; color: var(--text-secondary); }
+
+.doneTitle { font-family: var(--font-display); font-size: 28px; font-weight: 800; }
+.doneStats { display: flex; gap: 48px; }
+.doneStat { display: flex; flex-direction: column; align-items: center; gap: 6px; }

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg-primary: #050508;
+  --bg-secondary: #0d0d14;
+  --bg-card: #111118;
+  --bg-elevated: #181825;
+  --border: #1e1e2e;
+  --border-bright: #2a2a40;
+
+  --accent-cyan: #00e5ff;
+  --accent-green: #00ff88;
+  --accent-red: #ff3860;
+  --accent-yellow: #ffd600;
+  --accent-purple: #a855f7;
+  --accent-orange: #ff6b35;
+
+  --text-primary: #e8e8f0;
+  --text-secondary: #6b6b8a;
+  --text-dim: #3a3a55;
+  --text-accent: #00e5ff;
+
+  --font-display: 'Space Mono', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --glow-cyan: 0 0 20px rgba(0, 229, 255, 0.3);
+  --glow-green: 0 0 20px rgba(0, 255, 136, 0.3);
+  --glow-red: 0 0 20px rgba(255, 56, 96, 0.3);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-bright);
+  border-radius: 2px;
+}
+
+button {
+  font-family: var(--font-mono);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.scanline {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.05) 2px,
+    rgba(0, 0, 0, 0.05) 4px
+  );
+  z-index: 9999;
+}
